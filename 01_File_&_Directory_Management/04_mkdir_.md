@@ -191,6 +191,12 @@ mkdir -p reports && cd reports && touch summary.txt
 ```dockerfile
 RUN mkdir -p /app/logs && chown -R appuser:appgroup /app
 ```
+`&&`: Logical AND to chain commands; the second runs only if the first succeeds.  
+`chown -R appuser:appgroup /app`:  
+- Changes ownership of `/app` and all its contents recursively (`-R`).
+- Sets the user owner to `appuser`.
+- Sets the group owner to `appgroup`.
+
 ✅ Prepares container filesystem with necessary directories and ownership.
 
 ---
